@@ -1,0 +1,157 @@
+:root {
+  --default: #343a40;
+  --primary: #015dde;
+  --secondary: #e55e0add;
+  --background: #f8f9fa;
+  --font-primary: "Poppins",sans-serif;
+  --sun-icon: "🌤";
+  --moon-icon: "🌙";
+}
+*,
+:after,
+:before {
+  box-sizing: border-box
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  line-height: 1.15;
+  font-family: var(--font-primary);
+  background: var(--background);
+}
+
+body {
+  color: #212529;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  text-align: left;
+  color: var(--default)
+}
+
+main {
+  display: table;
+  padding: 50px;
+}
+
+legend{
+  display: flex;
+  float: right;
+}
+
+section {
+  display: flex;
+}
+
+div {
+  display: table-cell;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 54px;
+  margin: 0px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+input {
+    margin: 6px;
+    position: relative;
+    display: flex;
+}
+
+b > a {
+  color: var(--primary);
+}
+
+.redirect{
+  margin: 8px 16px 0px 0px;
+  padding: 20px;
+  height: 64px;
+  width: 64px;
+  display: inline-flex;
+  border-radius: 6px;
+  background-color: var(--background);
+  border: 1px solid var(--default);
+}
+
+.redirect:hover{
+  background: var(--primary);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+svg {
+  fill: var(--default);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider::before {
+  position: absolute;
+  content: var(--sun-icon);
+  margin: 6px;
+  left: 4px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider::before {
+  content: var(--moon-icon);
+}
+
+input:checked + .slider {
+  background-color: black;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+img{
+  width: 40vw;
+}
+
+@media (max-width: 756px){
+  section{
+    flex-direction: column-reverse;
+  }
+  main, div{
+    padding: 10px;
+  }
+  img{
+    width: calc(100vw - 40px);
+  }
+}
