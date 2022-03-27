@@ -6,7 +6,7 @@
   // Experience Year Calculator
   const date = new Date();
   const now = date.getFullYear();
-  const firstFieldExperience = 2018
+  const firstFieldExperience = 2019
   document.getElementById("experience").innerHTML = now - firstFieldExperience
 
   // Github Profile Image 

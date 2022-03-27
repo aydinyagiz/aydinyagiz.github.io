@@ -45,6 +45,7 @@ legend{
 
 section {
   display: flex;
+  min-height: 100vh;
 }
 
 div {
@@ -66,6 +67,8 @@ input {
     position: relative;
     display: flex;
 }
+
+  
 
 b > a {
   color: var(--primary);
@@ -150,6 +153,10 @@ img{
   background: var(--default);
   border-radius: 50%;
   border: 5px solid var(--default);
+}
+
+ul li {
+  list-style-type: square;
 }
 
 @media (max-width: 756px){
