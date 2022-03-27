@@ -37,8 +37,8 @@ main {
 }
 
 legend{
-  display: flex;
-  float: right;
+  position: absolute;
+  right: 20px;
 }
 
 section {
@@ -142,6 +142,9 @@ input:checked + .slider:before {
 
 img{
   width: 40vw;
+  background: var(--default);
+  border-radius: 50%;
+  border: 5px solid var(--default);
 }
 
 @media (max-width: 756px){
