@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
 :root {
   --default: #343a40;
   --primary: #015dde;
@@ -85,9 +87,12 @@ b > a {
   transition: 0.5s;
   cursor: pointer;
 }
-
 svg {
   fill: var(--default);
+}
+
+.redirect:hover > svg{
+  fill: var(--background);
 }
 
 .switch {
