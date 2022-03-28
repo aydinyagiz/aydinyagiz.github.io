@@ -217,7 +217,7 @@ ul li::before {
   color: var(--primary);
 }
 
-@media (max-width: 756px){
+@media screen and  (max-width: 756px){
   section{
     flex-direction: column;
   }
