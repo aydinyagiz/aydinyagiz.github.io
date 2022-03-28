@@ -23,7 +23,7 @@
   const whiteMode = [
     {name: 'default', value: "#343a40"}, 
     {name: 'primary', value: "#015dde"},
-    {name: 'background', value: "#f8f9fa"},
+    {name: 'background', value: "#f8f9fa"}
   ]
   
   const changeTheme = () => {

@@ -8,6 +8,10 @@
   --font-primary: "Poppins",sans-serif;
   --sun-icon: "🌤";
   --moon-icon: "🌙";
+  --rocket-icon: "🚀";
+  --right-icon: "⚜️";
+  --sparkles-icon: "✨";
+  --office-icon: "🏢"; 
 }
 *,
 :after,
@@ -63,15 +67,43 @@ h3 {
 }
 
 input {
-    margin: 6px;
-    position: relative;
-    display: flex;
+  margin: 6px;
+  position: relative;
+  display: flex;
 }
 
-  
+b > a {
+  transition: .5s;
+}
+
+b > a:hover{
+  border-bottom: 2px solid var(--primary);
+  cursor: pointer;
+}
 
 b > a {
-  color: var(--primary);
+  text-decoration: none;
+  color: var(--default);
+  font-weight: 700;
+  position: relative;
+}
+
+b > a::before {
+  content: '';
+  background-color: var(--primary);
+  color: var(--background);
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  width: 100%;
+  height: 8px;
+  z-index: -1;
+  transition: all .3s ease-in-out;
+}
+
+b > a:hover::before {
+  bottom: 0;
+  height: 100%;
 }
 
 .redirect{
@@ -120,7 +152,6 @@ svg {
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  -webkit-transition: .4s;
   transition: .4s;
   border-radius: 34px;
 }
@@ -130,7 +161,6 @@ svg {
   content: var(--sun-icon);
   margin: 6px;
   left: 4px;
-  -webkit-transition: .4s;
   transition: .4s;
 }
 
@@ -155,8 +185,36 @@ img{
   border: 5px solid var(--default);
 }
 
-ul li {
-  list-style-type: square;
+ul{
+  list-style: none;
+  padding: 0px;
+}
+
+ul li::before {
+  margin-right: 10px;
+  font-size: 28px;
+}
+
+.right li::before{
+  content: var(--right-icon);
+}
+
+.office::before{
+  content: var(--office-icon);
+  margin-right: 10px;
+}
+
+.office{
+  font-size: 32px;
+  text-decoration: none;
+  color: var(--default);
+  transition: .5s;
+}
+
+.office:hover{
+  cursor: pointer;
+  border-bottom: 2px solid var(--primary);
+  color: var(--primary);
 }
 
 @media (max-width: 756px){
