@@ -219,7 +219,7 @@ ul li::before {
 
 @media (max-width: 756px){
   section{
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
   main, div{
     padding: 10px;
