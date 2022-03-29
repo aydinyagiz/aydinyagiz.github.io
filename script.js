@@ -34,3 +34,23 @@
     }
     mode.forEach(({name, value}) => document.documentElement.style.setProperty(`--${name}`, value))
   }
+
+  const { Configuration, OpenAIApi } = require("openai");
+
+  const configuration = new Configuration({
+    apiKey: "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",
+  });
+
+  const openai = new OpenAIApi(configuration);
+
+  const openAIRequest = async (ask) => {
+    const ask = document.getElementById("text")
+    const response = await openai.createCompletion("text-davinci-002", {
+      prompt: ask,
+      temperature: 0.7,
+      max_tokens: 256,
+      top_p: 1,
+      frequency_penalty: 0,
+      presence_penalty: 0,
+    });
+  }
