@@ -5,13 +5,14 @@
   <script async src="script.js"></script>
   <script async src="https://cdn.jsdelivr.net/npm/openai@2.0.0/dist/openai.min.js"></script>
 </head>
-<body>
-  <legend>
-    <form action="openAIRequest()">
+<body>  
+  <form action="openAIRequest()">
       <label for="text">Say something to try GPT-3</label>
       <input type="text" id="text" name="text">
+      <input type="answer" id="answer" name="answer" disabled style="height: auto;">
       <input type="submit" value="Submit">
   </form> 
+  <legend>
     <label class="switch" onclick="changeTheme()"> 
       <input id="colorMode" type="checkbox">
       <span class="slider"></span>

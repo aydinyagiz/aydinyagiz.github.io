@@ -43,7 +43,7 @@
 
   const openai = new OpenAIApi(configuration);
 
-  const openAIRequest = async (ask) => {
+  const openAIRequest = async () => {
     const ask = document.getElementById("text")
     const response = await openai.createCompletion("text-davinci-002", {
       prompt: ask,
@@ -53,4 +53,6 @@
       frequency_penalty: 0,
       presence_penalty: 0,
     });
+    document.getElementById("answer") =  response;
+    console.log(response)
   }
